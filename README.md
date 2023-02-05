@@ -89,3 +89,45 @@ module.exports = function(api) {
 
 ```
 
+### comando para rodar a aplicação
+adicionar no package.json
+```
+"start:wsl": "REACT_NATIVE_PACKAGER_HOSTNAME=$(netsh.exe interface ip show address 'Ethernet' | grep 'IP Address' | sed -r 's/^.*IP Address:\\W*//') expo start",
+```
+rodar a aplicação usando
+
+```
+npm run wsl:start
+```
+
+### instalando o native-base
+
+https://docs.nativebase.io/install-expo
+
+
+### instalando o react-native-svg-transform
+
+```
+npm i react-native-svg-transformer --save-dev
+```
+
+precisa criar o arquivo metro.config.js
+https://github.com/kristerkari/react-native-svg-transformer
+
+
+### instalando o react-navigation
+
+precisa instalar ele pra pode fazer as navegaçoes entre as telas
+
+precisa instalar esses dois comandos aqui 
+
+```
+  npm install @react-navigation/native
+
+  npx expo install react-native-screens react-native-safe-area-context
+```
+e apos precisa instalar o stack navigation que a forma de navegação que iremos usar agora
+
+```
+npm install @react-navigation/native-stack
+```
